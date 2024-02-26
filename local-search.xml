@@ -16,5 +16,18 @@
   
   
   
+  <entry>
+    <title>vscode报错</title>
+    <link href="/2024/02/26/vscode%E6%8A%A5%E9%94%99/"/>
+    <url>/2024/02/26/vscode%E6%8A%A5%E9%94%99/</url>
+    
+    <content type="html"><![CDATA[<h2 id="故障现象"><a href="#故障现象" class="headerlink" title="故障现象"></a>故障现象</h2><p>vscode在登陆</p><h2 id="使用gnome-keyring"><a href="#使用gnome-keyring" class="headerlink" title="使用gnome-keyring"></a>使用gnome-keyring</h2><ol><li>安装<code>gnome-keyring</code></li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo oma install gnome-keyring<br></code></pre></td></tr></table></figure><ol start="2"><li>在<code>vscode</code>中启用<code>gnome-keyring</code></li></ol><ul><li>方式一：编辑<code>～/.vscode/argv.json</code>，在最后一个配置项后添加以下内容：</li></ul><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;password-store&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;gnome-libsecret&quot;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure><ul><li>方式二：在<code>vscode</code>中，使用快捷键<code>CTRL + shift + P</code>，打开命令面板，找到以下命令并打开：</li></ul><p><img src="/../img/"></p><p>在打开的配置文件中，添加以下项，并重启<code>vscode</code>.</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;password-store&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;gnome-libsecret&quot;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure><p>注意：配置文件的每一项配置应以<code>,</code>结尾。</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
   
 </search>
