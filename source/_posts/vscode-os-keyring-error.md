@@ -21,7 +21,7 @@ sudo oma install gnome-keyring
 
 2. 在`vscode`中启用`gnome-keyring`
 
-* 方式一：编辑`～/.vscode/argv.json`，在最后一个配置项后添加以下内容：
+* 方式一：编辑`～/.vscode/argv.json`，在最后一个配置项后添加以下内容，保存并重启`vscode`
 
 ```json
 	"password-store": "gnome-libsecret",
