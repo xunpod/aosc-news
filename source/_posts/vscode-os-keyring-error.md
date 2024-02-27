@@ -41,3 +41,7 @@ sudo oma install gnome-keyring
 ![参考配置](../imgs/vscode-argv-json.png)
 
 接下来，您就可以享用vscode了！
+
+## 参考资料
+
+[Setting Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync#_recommended-configure-the-keyring-to-use-with-vs-code)

@@ -23,3 +23,8 @@ curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_
 ```
 
 等待安装完成，您就可以享用1Panel了！
+
+## 参考资料
+
+
+[在线安装-1Panel文档](https://1panel.cn/docs/installation/online_installation/)

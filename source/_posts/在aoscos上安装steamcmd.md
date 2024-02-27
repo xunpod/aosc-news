@@ -28,5 +28,8 @@ curl -sqL "https://media.st.dl.bscstorage.net/client/installer/steamcmd_linux.ta
 ./steamcmd.sh
 ```
 
-等待steamcmd更新完成，您就可以享用了此应用了！
+等待steamcmd更新完成，您就可以享用此应用了！
 
+## 参考资料
+
+[VALVE Developer Community](https://developer.valvesoftware.com/wiki/SteamCMD:zh-cn)
