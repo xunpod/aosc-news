@@ -1,5 +1,5 @@
 ---
-title: 在aoscos上安装steamcmd
+title: 在AOSCOS上安装steamcmd
 date: 2024-02-27 15:27:04
 tags:
 ---

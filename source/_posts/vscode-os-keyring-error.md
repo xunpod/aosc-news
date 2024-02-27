@@ -29,7 +29,7 @@ sudo oma install gnome-keyring
 
 * 方式二：在`vscode`中，使用快捷键`CTRL + shift + P`，打开命令面板，找到`首先项: Configure Runtime Arguments`并打开：
 
-![首先项: Configure Runtime Arguments](../imgs/vscode-Configure-Runtime-Arguments.png)
+![首选项: Configure Runtime Arguments](../imgs/vscode-Configure-Runtime-Arguments.png)
 
 在打开的配置文件中，添加以下项，保存并重启`vscode`。
 
@@ -40,7 +40,15 @@ sudo oma install gnome-keyring
 
 ![参考配置](../imgs/vscode-argv-json.png)
 
-接下来，您就可以享用vscode了！
+接下来，您就可以享用`vscode`了！
+
+## 额外事项
+
+1. 根据`vscode`官方文档，其在`kde`桌面环境上可以使用`kwalletmanager5（org.kde.kwalletmanager5）`来管理加密，但AOSCOS上的`kwalletmanager5`打开后无响应。故障原因是`discover`中的`kwalletmanager5`为`flatpak`版，此版本存在兼容性问题。建议用户使用`oma`安装`kwalletmanager5`：
+
+```bash
+sudo oma install kwalletmanager
+```
 
 ## 参考资料
 

@@ -1,5 +1,5 @@
 ---
-title: 在aoscos上安装1Panel
+title: 在AOSCOS上安装1Panel
 date: 2024-02-27 15:22:51
 tags:
 ---
