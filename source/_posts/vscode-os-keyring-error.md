@@ -1,7 +1,7 @@
 ---
 title: vscode提示os-keyring不可用于加密
 date: 2024-02-27 15:10:51
-
+tags: vscode 应用修复
 ---
 
 ## 故障现象
