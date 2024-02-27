@@ -29,3 +29,4 @@ curl -sqL "https://media.st.dl.bscstorage.net/client/installer/steamcmd_linux.ta
 ```
 
 等待steamcmd更新完成，您就可以享用了此应用了！
+
