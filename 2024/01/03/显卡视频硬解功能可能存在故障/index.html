@@ -18,11 +18,15 @@
   <meta name="author" content="温柔@xunpod">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="https://aosc.xunpod.com/archives/2024/index.html">
+    <meta name="description" content="根据用户反馈，GCN (Graphics Core Next) 架构前较老的 AMD Radeon 显卡（如信创硬件上较为常见的 AMD Radeon R5 230 和 HD7350 两个型号）上无法正常使用硬件视频解码加速（简称硬解），其症状为视频画面为全黑或有大量杂斑 经调查，该问题是由 Mesa 23.3 引入的 (https:&#x2F;&#x2F;gitlab.freedesktop.org&#x2F;mesa&#x2F;me">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mesa 23.3.0 更新后较老的 AMD Radeon 显卡视频硬解功能可能存在故障">
+<meta property="og:url" content="https://aosc.xunpod.com/2024/01/03/%E6%98%BE%E5%8D%A1%E8%A7%86%E9%A2%91%E7%A1%AC%E8%A7%A3%E5%8A%9F%E8%83%BD%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E6%95%85%E9%9A%9C/index.html">
 <meta property="og:site_name" content="AOSC的非官方信息">
+<meta property="og:description" content="根据用户反馈，GCN (Graphics Core Next) 架构前较老的 AMD Radeon 显卡（如信创硬件上较为常见的 AMD Radeon R5 230 和 HD7350 两个型号）上无法正常使用硬件视频解码加速（简称硬解），其症状为视频画面为全黑或有大量杂斑 经调查，该问题是由 Mesa 23.3 引入的 (https:&#x2F;&#x2F;gitlab.freedesktop.org&#x2F;mesa&#x2F;me">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-01-03T22:12:53.000Z">
+<meta property="article:modified_time" content="2024-02-27T08:17:42.916Z">
 <meta property="article:author" content="温柔@xunpod">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -30,11 +34,17 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>归档 - AOSC的非官方信息</title>
+  <title>Mesa 23.3.0 更新后较老的 AMD Radeon 显卡视频硬解功能可能存在故障 - AOSC的非官方信息</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -217,9 +227,49 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">归档</span>
+            <span id="subtitle">Mesa 23.3.0 更新后较老的 AMD Radeon 显卡视频硬解功能可能存在故障</span>
           
         </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-01-03 22:12" pubdate>
+          2024年1月3日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          233 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          2 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
 
         
       </div>
@@ -235,64 +285,134 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
-        <div id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-<div class="list-group">
-  <p class="h4">共计 5 篇文章</p>
-  <hr>
-  
-  
-    
       
-      <p class="h5">2024</p>
-    
-    <a href="/2024/02/27/%E5%9C%A8aoscos%E4%B8%8A%E5%AE%89%E8%A3%85steamcmd/" class="list-group-item list-group-item-action">
-      <time>02-27</time>
-      <div class="list-group-item-title">在aoscos上安装steamcmd</div>
-    </a>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">Mesa 23.3.0 更新后较老的 AMD Radeon 显卡视频硬解功能可能存在故障</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>根据用户反馈，GCN (Graphics Core Next) 架构前较老的 AMD Radeon 显卡（如信创硬件上较为常见的 AMD Radeon R5 230 和 HD7350 两个型号）上无法正常使用硬件视频解码加速（简称硬解），其症状为视频画面为全黑或有大量杂斑</p>
+<p>经调查，该问题是由 Mesa 23.3 引入的 (<a target="_blank" rel="noopener" href="https://gitlab.freedesktop.org/mesa/mesa/-/issues/10345)%EF%BC%8C%E4%B8%94%E6%9A%82%E6%97%A0%E7%A8%B3%E5%AE%9A%E7%89%88%E6%9C%AC%E4%BF%AE%E5%A4%8D%E4%BA%86%E8%BF%99%E4%B8%80%E9%97%AE%E9%A2%98%EF%BC%9B%E5%9B%A0%E6%AD%A4%EF%BC%8C%E6%88%91%E4%BB%AC%E5%BB%BA%E8%AE%AE%E6%AD%A4%E7%B1%BB%E6%98%BE%E5%8D%A1%E7%94%A8%E6%88%B7%E6%9A%82%E6%97%B6%E6%89%93%E5%BC%80">https://gitlab.freedesktop.org/mesa/mesa/-/issues/10345)，且暂无稳定版本修复了这一问题；因此，我们建议此类显卡用户暂时打开</a> Mesa 24 测试源，方可缓解这一问题</p>
+<p>请输入如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo oma topics<br></code></pre></td></tr></table></figure>
+
+<p>输入 mesa-24，按 Enter 或空格键选中该测试源，而后按 Esc 应用更改，方可收到版本为 1:23.3.2+git20240103+dxheaders1.611.0 的 mesa 更新；更新安装完成后，请重启电脑</p>
+<p>Mesa 24 的稳定版本预计将于二月发布，在此之前请保持该测试源打开以便保障视频硬解功能可用</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
   
-    
-    <a href="/2024/02/27/%E5%9C%A8aoscos%E4%B8%8A%E5%AE%89%E8%A3%851Panel/" class="list-group-item list-group-item-action">
-      <time>02-27</time>
-      <div class="list-group-item-title">在aoscos上安装1Panel</div>
-    </a>
   
-    
-    <a href="/2024/02/27/vscode-os-keyring-error/" class="list-group-item list-group-item-action">
-      <time>02-27</time>
-      <div class="list-group-item-title">vscode提示os-keyring不可用于加密</div>
-    </a>
-  
-    
-    <a href="/2024/02/27/hello-world/" class="list-group-item list-group-item-action">
-      <time>02-27</time>
-      <div class="list-group-item-title">Hello World</div>
-    </a>
-  
-    
-    <a href="/2024/01/03/%E6%98%BE%E5%8D%A1%E8%A7%86%E9%A2%91%E7%A1%AC%E8%A7%A3%E5%8A%9F%E8%83%BD%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%E6%95%85%E9%9A%9C/" class="list-group-item list-group-item-action">
-      <time>01-03</time>
-      <div class="list-group-item-title">Mesa 23.3.0 更新后较老的 AMD Radeon 显卡视频硬解功能可能存在故障</div>
-    </a>
-  
+</div>
+
+
+              
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/02/27/hello-world/" title="Hello World">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
 </div>
 
 
 
 
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.utils.listenDOMLoaded(function() {
+      Fluid.events.registerRefreshCallback(function() {
+        if ('mermaid' in window) {
+          mermaid.init();
+        }
+      });
+    });
+  });
+</script>
+
+
+
+
+
+
     
 
     
@@ -391,6 +511,99 @@
 
 
 
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
 
