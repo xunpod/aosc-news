@@ -5,7 +5,7 @@ tags:
 hide: false
 ---
 
-AOSCOS系统安装器分为前端[deploykit-gui](https://github.com/AOSC-Dev/deploykit-gui)和后端[deploykit-backend](https://github.com/AOSC-Dev/deploykit-backend)
+AOSCOS系统安装器分为前端[deploykit-gui](https://github.com/AOSC-Dev/deploykit-gui)和后端[deploykit-backend](https://github.com/AOSC-Dev/deploykit-backend)。
 
 
 ## 更新系统并安装依赖
@@ -28,7 +28,8 @@ yarn && yarn tauri build
 ```bash
 git clone https://github.com/AOSC-Dev/deploykit-backend
 cd deploykit-backend
-cargo build --release
+cargo build --release //amd64
+cargo build —release —features custom-protocol //LoongArch
 ```
 完成编译后，将`deploykit-backend/deploykit-dbus.conf.debug`重命名为`deploykit-dbus.conf`，将以下编译成果存放到其他介质上，确保下文启动的`livekit`环境能访问到它们：
 
@@ -40,9 +41,20 @@ deploykit-backend/target/release/deploykit-backend
 
 ## 启动livekit环境
 
-1. 在官网下载[livekit]()镜像，并刻盘启动。
+1. 在官网下载对应架构的[livekit](https://aosc.io/zh-cn/downloads/)镜像，并刻盘启动。
 
-在启动
+2. 在启动`livekit`环境后，将上文的`deploykit-dbus.conf`复制到`/usr/share/dbus-1/system.d/`下：
+
+3. 运行后端，在`deploykit-backend`所在目录执行：
+
+```bash
+sudo ./deploykit-backend
+```
+4. 运行前端，在`deploykit-gui`所在目录执行：
+
+```bash
+./deploykit-gui
+```
 
 ## 故障处理
 
