@@ -20,7 +20,6 @@ sudo oma install devel-base llvm parted rustc yarn
 git clone https://github.com/AOSC-Dev/deploykit-gui.git
 cd deploykit-gui
 yarn && yarn tauri build
-
 ```
 
 ## 编译`deploykit-backend`
@@ -28,8 +27,7 @@ yarn && yarn tauri build
 ```bash
 git clone https://github.com/AOSC-Dev/deploykit-backend
 cd deploykit-backend
-cargo build --release //amd64
-cargo build —release —features custom-protocol //LoongArch
+cargo build --release
 ```
 完成编译后，将`deploykit-backend/deploykit-dbus.conf.debug`重命名为`deploykit-dbus.conf`，将以下编译成果存放到其他介质上，确保下文启动的`livekit`环境能访问到它们：
 
