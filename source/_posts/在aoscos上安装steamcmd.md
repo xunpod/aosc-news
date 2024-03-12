@@ -16,12 +16,6 @@ sudo oma install gcc+32
 curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
 ```
 
-中国内地用户可使用以下命令以使用内地节点：
-
-```bash
-curl -sqL "https://media.st.dl.bscstorage.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
-```
-
 ## 运行
 
 ```bash
